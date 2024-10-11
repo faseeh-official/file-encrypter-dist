@@ -7,40 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="title-and-back">
+    <div class="title-and-back">  
         <h1>File Encrypter</h1>
         <a href="https://coderapids.github.io/"><button class="home-btn">Back to Homepage</button></a>
     </div>
     <p>This is a simple Python Tkinter application that can encrypt and decrypt all types of files. When you encrypt a file, the program generates a key file with the same name, and you have to place the key file in the same directory where the encrypted file is located in order to decrypt the file.</p>
     <img src="img.png">
     <h2>What's in the Latest Update</h2>
-    <h3>The latest update fixed the following bugs:</h3>
+    <p>The latest version has the following bug fixes and improvements.</p>
+    <h3>Bug Fixes</h3>
     <ol>
         <li>The program now automatically identifies the key file and will not encrypt it if it's a key file.</li>
         <li>Previously, the program displayed "is selected" when we clicked the file explorer button but didn't select any files. Now, the program correctly shows "no file selected."</li>
         <li>The program used to show "encrypt" in the action button even though no file was selected. Now, the action button displays "-" if no files are selected or if the action can't be done.</li>
     </ol>
-    <h3>Improvements made in the latest version:</h3>
+    <h3>Improvements</h3>
     <ol>
         <li>Improved the quality of error messages.</li>
         <li>Removed the label that showed the file path, as it felt complicated (I want this app to be simple).</li>
     </ol>
-    
-    <h2>Download For Windows</h2>
+
+    <h2>Download for Windows</h2>
     <div class="download-btns-div">
-        <a href="v1/file_encrypter.zip" download>
-            <button>Download Bundled Application (For Faster Startup)</button>
-        </a>
-        <a href="v1/file_encrypter_standalone.zip" download>
-            <button>Download Standalone Application (More Portable)</button>
-        </a>        
+        <button class="download-button" data-download-url="v1/file_encypter.zip">Download Bundled Application (For Faster Startup)</button>
+        <button class="download-button" data-download-url="v1/file_encypter_standalone.zip">Download the Application as a Single EXE (More Portable)</button>
     </div>
-    <h2>Download for Linux</h2>
-    <p>The application currently supports Debian-based Linux distros only. The application might not look the same on all operating systems.</p>
+    <h2>Download For Debian Linux</h2>
     <div class="download-btns-div">
-        <a href="v1/file_encrypter_deb.zip" download>
-            <button>Download for Debian Based Systems</button>
-        </a>        
+        <button class="download-button" data-download-url="v1/file_encypter_deb.zip">Download for Ubuntu, Linux Mint, and Other Debian-based Distros</button>
     </div>
+
+    <!-- Modal Box -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <p>You are granted a personal, non-exclusive, non-transferable, and non-commercial license to use this software. This software is licensed, not sold. <a href="license.html" target="_blank">See more</a></p>
+        <p>Please do not redistribute this software. Instead, share the link provided below.</p>
+        <a href="https://path/to/this/website/">https://path/to/this/website/</a>
+        <button id="okBtn" class="ok-button">Agree and Download</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

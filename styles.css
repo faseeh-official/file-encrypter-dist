@@ -22,24 +22,21 @@ h1, h2, h3, p, ol, ul {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: darkblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .title-and-back {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-button {
-    background-color: var(--primary);
-    color: var(--on-primary);
-    flex: 1;
-    border: none;
-    border-radius: 999px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.1s;
-}
-button:hover {
-    background-color: var(--primary-on-hover);
 }
 
 .home-btn {
@@ -56,15 +53,90 @@ button:hover {
     background-color: var(--primary-on-hover);
 }
 
-.warning {
-    color: var(--error);
-}
-
 .download-btns-div {
-    display: flex;
-    justify-content: right;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: end;
     gap: 6px;
     padding: 10px;
+}
+
+.download-button {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.download-button:hover {
+    background-color: var(--primary-on-hover);
+}
+
+.modal {
+    display: none;
+    position: fixed; /* Stays in place relative to the viewport */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the modal perfectly */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+
+.ok-button {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.ok-button:hover {
+    background-color: var(--primary-on-hover);
+}
+
+.warning {
+    color: var(--error);
 }
 
 video {
